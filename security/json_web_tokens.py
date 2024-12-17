@@ -4,7 +4,8 @@ from datetime import timezone, datetime, timedelta
 import jwt
 from jwt.exceptions import InvalidTokenError
 
-SECRET_KEY = "534b743934c2b72c5f910b527c84594632c3355b7b7a6d87b97cf2b3d9726550"
+from config import SECRET_KEY
+
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
