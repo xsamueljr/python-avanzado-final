@@ -6,6 +6,12 @@ from logger import logger
 
 load_dotenv()
 
+SECRET_KEY = os.getenv("SECRET_KEY")
+
+if SECRET_KEY is None:
+    logger.error("`SECRET_KEY` environment variable must be set")
+    exit(1)
+
 PORT = int(os.getenv("PORT", 3000))
 HOST = os.getenv("HOST", "127.0.0.1")
 
